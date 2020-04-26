@@ -15,11 +15,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/css/jobs.css" />
 
-    <title>Account</title>
+    <title>Jobs Management</title>
 </head>
 
 <body>
     <div class="layout">
+
+
         <center><img src="~/css/pictures/icons/logo1.png" width="500px" /></center>
         <div class="header">
             <div class="menu">
@@ -42,29 +44,47 @@
         </div>
 
 
+       
+            
+       
+
+
         <div class="main">
+            <button class="gradientButton">add</button>
+            <div class="jobs-wrapper">
+                @foreach (Job job in Model.jobs)
+                {
+                    <div class="job-wrapper">
+                        <div class="job">
+                            <div class="title">@job.title</div>
 
-            @foreach (Job job in Model.jobs){
-                    <div class="job">
-                          <div class="title">
-                            @job.title
-                          </div>
-                          <div class="detail">
+                            <div class="applicants">2</div>
 
-                          </div>
+                            <div class="basicInfo">
+                                <div>@job.category</div>
+                                <div>@job.time</div>
+                                <div>@job.location</div>
+                                <div>@job.wages</div>
+                            </div>
+
+                            <div class="description">@job.description</div>
+                        </div>
                     </div>
                 }
-
-
-
-
-
-
-
-
-
-
+            </div>
         </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
 
 
 </body>

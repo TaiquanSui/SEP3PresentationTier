@@ -24,10 +24,6 @@ body {
 }
 
 
-#logo {
-    width: 500px;
-}
-
 #body {
     position: absolute;
     top: 50%;
@@ -35,6 +31,10 @@ body {
     transform: translate(-50%,-50%);
 }
 
+
+#logo {
+    width: 100px;
+}
 
 
 .search {
@@ -98,6 +98,27 @@ a:hover {
 
 
 
+
+.gradientButton {
+    position: relative;
+    width: 142px;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #ffeb3b, #9796f0, #D3959B, #91EAE4, #7F7FD5, #12c2e9, #eaafc8);
+    background-size: 400%;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    filter: brightness(102%);
+}
+
 .buttonwrapper {
     background-color: #6D4C41;
     width: 150px;
@@ -108,4 +129,37 @@ a:hover {
     justify-content: center;
 }
 
+.gradientButton:hover {
+    animation: bgAnimation 8s infinite;
+}
 
+
+
+.gradientButton::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    background: linear-gradient(90deg, #ffeb3b, #9796f0, #D3959B, #91EAE4, #7F7FD5, #12c2e9, #eaafc8);
+    background-size: 200%;
+    border-radius: 30px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+
+.gradientButton:hover::before {
+    filter: blur(1px);
+    opacity: 1;
+}
+
+
+.gradientButton:focus, .gradientButton:active:focus, .gradientButton.active:focus, .gradientButton.focus, .gradientButton:active.focus, .gradientButton.active.focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: none;
+}
