@@ -1,4 +1,7 @@
 
+
+
+
 .gradientButton {
     position: relative;
     width: 200px;
@@ -13,8 +16,8 @@
     background: linear-gradient(to right, #ffeb3b, #9796f0, #D3959B, #91EAE4, #7F7FD5, #12c2e9, #eaafc8);
     background-size: 200%;
     border-radius: 20px;
-    filter: brightness(108%);
-    border: none;
+    filter: brightness(102%);
+    outline:none;
 }
 
 
