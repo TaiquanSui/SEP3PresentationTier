@@ -1,3 +1,10 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right,#9796f0,#fbc7d4,#D3959B,#BFE6BA,#91EAE4,#86A8E7,#7F7FD5,#12c2e9,#c471ed,#654ea3,#eaafc8);
+    background-size: 200%;
+    animation: bgAnimation 90s infinite;
+}
 
 
 .form{
@@ -64,7 +71,7 @@ h1,label{
 
     #login-wrapper::after, #regist-wrapper::after {
         content: "";
-        background: url(pictures/copenhagen-denmark.jpg);
+        background: url("pictures/background images/copenhagen-denmark.jpg");
         background-size: cover;
         opacity: 0.8;
         top: 0;

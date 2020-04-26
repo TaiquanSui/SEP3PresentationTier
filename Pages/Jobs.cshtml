@@ -1,4 +1,5 @@
 ﻿@page
+@using SEP3.Models
 @model SEP3.Pages.JobsModel
 @{
     ViewData["Title"] = "Jobs";
@@ -40,9 +41,30 @@
             </div>
         </div>
 
-        <div class="main">wc</div>
 
-    </div>
+        <div class="main">
+
+            @foreach (Job job in Model.jobs){
+                    <div class="job">
+                          <div class="title">
+                            @job.title
+                          </div>
+                          <div class="detail">
+
+                          </div>
+                    </div>
+                }
+
+
+
+
+
+
+
+
+
+
+        </div>
 
 
 </body>
